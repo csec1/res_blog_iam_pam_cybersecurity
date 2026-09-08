@@ -1,6 +1,6 @@
 # Project Evidence & Verification Log
 
-This directory contains visual artifacts, configuration verifications, and operational screenshots documenting the implementation, active monitoring, and audit capabilities across the project infrastructure.
+This directory contains visual artifacts, configuration verifications, and operational screenshots documenting the implementation, monitoring, access control, and audit capabilities across the project infrastructure.
 
 ---
 
@@ -17,7 +17,10 @@ evidence/
 │   └── denied-action.png
 ├── pam/
 │   ├── privileged-access-request.png
-│   └── jit-access-expiration.png
+│   ├── pam-policy.png
+│   ├── secret-version-history.png
+│   ├── vault-audit-enabled.png
+│   └── vault-audit-event.png
 ├── vault/
 │   ├── vault-private-healthy.png
 │   └── vault-policy-audit.png
@@ -28,7 +31,7 @@ evidence/
 └── audit-recovery/
     ├── cloudtrail-audit-evidence.png
     └── vault-backup-restore.png
-
+```
 
 ## Artifact Descriptions
 
@@ -65,12 +68,3 @@ evidence/
 
 - **`audit-recovery/cloudtrail-audit-evidence.png`** — Shows AWS CloudTrail audit evidence recording activity and API calls within the environment.
 - **`audit-recovery/vault-backup-restore.png`** — Shows evidence of Vault backup creation and restoration testing for disaster recovery validation.
-
-'''text
-
-
-
-
-
-
-
