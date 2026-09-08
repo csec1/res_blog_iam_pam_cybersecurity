@@ -66,7 +66,7 @@ evidence/
 - **`audit-recovery/cloudtrail-audit-evidence.png`** — Shows AWS CloudTrail audit evidence recording activity and API calls within the environment.
 - **`audit-recovery/vault-backup-restore.png`** — Shows evidence of Vault backup creation and restoration testing for disaster recovery validation.
 
-
+'''text
 
 
 
