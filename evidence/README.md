@@ -29,35 +29,48 @@ evidence/
     ├── cloudtrail-audit-evidence.png
     └── vault-backup-restore.png
 
-Evidence Inventory
-1. Identity & Access Management (IAM)
-iam/okta-identity-center-federation.png: Verification of identity federation configured between Okta and AWS IAM Identity Center.
 
-iam/aws-temporary-role-access.png: Screenshot showing temporary credentials issued for federated role access.
+## Artifact Descriptions
 
-2. Authorization Rules
-authorization/permitted-action.png: Demonstration of a successful request where fine-grained authorization policies allow execution.
+### IAM
 
-authorization/denied-action.png: Proof of access enforcement blocking unauthorized or out-of-scope actions.
+- **`iam/okta-identity-center-federation.png`** — Shows identity federation between Okta and AWS IAM Identity Center, demonstrating centralized identity integration.
+- **`iam/aws-temporary-role-access.png`** — Shows temporary AWS role access obtained through the federated identity workflow.
 
-3. Privileged Access Management (PAM)
-pam/privileged-access-request.png: Audit log/UI confirmation of a privileged session request flow.
+### Authorization
 
-pam/jit-access-expiration.png: Evidence of Just-In-Time (JIT) elevated privileges automatically revoking after timeout.
+- **`authorization/permitted-action.png`** — Demonstrates a permitted action successfully authorized by the configured access-control policy.
+- **`authorization/denied-action.png`** — Demonstrates an unauthorized action being denied by the authorization controls.
 
-4. HashiCorp Vault
-vault/vault-private-healthy.png: Status dashboard showing HashiCorp Vault operating in a healthy, sealed/unsealed operational state.
+### PAM
 
-vault/vault-policy-audit.png: Output showing configured access policies applied to key-value engines and secrets paths.
+- **`pam/privileged-access-request.png`** — Shows the protected privileged-access record stored in HashiCorp Vault under `secret/pam/test-privileged`.
+- **`pam/pam-policy.png`** — Shows the `pam-privileged` Vault policy and its controlled permissions for PAM-managed secrets and metadata.
+- **`pam/secret-version-history.png`** — Shows Vault KV version history for the privileged-access record, including four tracked versions and their creation/update metadata.
+- **`pam/vault-audit-enabled.png`** — Shows Vault audit logging enabled through the file audit device at `/opt/vault/log/audit.log`.
+- **`pam/vault-audit-event.png`** — Shows an audit event recording an authorized read operation against the PAM secret metadata path.
 
-5. Security Monitoring (Wazuh SIEM)
-wazuh/wazuh-private-dashboard.png: Overview of the central SIEM monitoring dashboard.
+### HashiCorp Vault
 
-wazuh/wazuh-agent-active.png: Confirmation of active endpoints and log agents connected to the manager.
+- **`vault/vault-private-healthy.png`** — Shows the private Vault deployment operating in a healthy state.
+- **`vault/vault-policy-audit.png`** — Shows Vault policy configuration and access controls applied to protected secret paths.
 
-wazuh/wazuh-security-results.png: Verification of threat detection alerts, rule matches, and compliance checks.
+### Wazuh SIEM
 
-6. Audit & Disaster Recovery
-audit-recovery/cloudtrail-audit-evidence.png: AWS CloudTrail audit logs validating API call recording across the environment.
+- **`wazuh/wazuh-private-dashboard.png`** — Shows the central Wazuh security monitoring dashboard.
+- **`wazuh/wazuh-agent-active.png`** — Shows active Wazuh agents connected to the monitoring infrastructure.
+- **`wazuh/wazuh-security-results.png`** — Shows security alerts, detection results, rule matches, and monitoring findings.
 
-audit-recovery/vault-backup-restore.png: Verification of successful backup creation and restore testing for Vault state files.
+### Audit & Recovery
+
+- **`audit-recovery/cloudtrail-audit-evidence.png`** — Shows AWS CloudTrail audit evidence recording activity and API calls within the environment.
+- **`audit-recovery/vault-backup-restore.png`** — Shows evidence of Vault backup creation and restoration testing for disaster recovery validation.
+
+
+
+
+
+
+
+
+
