@@ -228,9 +228,9 @@ All published evidence is intentionally sanitized.
 
 **IAM / Federation / Authorization Validation:** Completed
 
-**PAM / Privileged Access Controls:** Next phase
+**PAM / Privileged Access Controls:** Completed
 
-**Secrets Management:** Planned
+**Secrets Management:** Completed
 
 ---
 
